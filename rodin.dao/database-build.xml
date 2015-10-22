@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="database" basedir="." default="rebuild-database-insertBaseData">
+
+	<description>This is a mix-in buildfile for handling database-related targets.</description>
+
+	<path id="classpath">
+		<fileset dir="${user.home}/.m2/repository" includes="**/*.jar" excludes="**/*-sources.jar" />
+		<pathelement location="${basedir}" />
+	</path>
+
+	<property file="build.properties" />
+	<property file="src/main/resources/database.properties" />
+
+	<taskdef name="dbunit" classname="org.dbunit.ant.DbUnitTask" classpathref="classpath" />
+	<taskdef resource="liquibasetasks.properties" classpathref="classpath" />
+
+	<target name="rebuild-database">
+		<echo>rebuilding the database in ${database.url}</echo>
+		<updateDatabase changeLogFile="database/db.changelog-master.xml" driver="${database.driver}" url="${database.url}" username="${database.username}" password="${database.password}" promptOnNonLocalDatabase="false" dropFirst="true" loglevel="info" classpathref="classpath" />
+	</target>
+
+
+	<target name="insertBaseData.mysql" description="imports base dataset to a MySQL database.">
+		<echo>imports base datasets to ${database.url}</echo>
+		<tstamp />
+		<dbunit driver="${database.driver}" url="${database.url}" userid="${database.username}" password="${database.password}" datatypefactory="org.dbunit.ext.mysql.MySqlDataTypeFactory">
+			<operation type="CLEAN_INSERT" src="${directory.datasets}/basedata.xml" format="flat" />
+		</dbunit>
+	</target>
+
+	<target name="insertBaseData" description="Imports base dataset" depends="insertBaseData.mysql">
+	</target>
+
+	<target name="rebuild-database-insertBaseData" description="Rebuilds the database and imports base dataset" depends="rebuild-database, insertBaseData" />
+
+</project>

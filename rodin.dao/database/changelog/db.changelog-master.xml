@@ -3,5 +3,19 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
 	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
-
+	<changeSet author="vener.guevarra" id="102720152230">
+		<createTable tableName="systemuser">
+			<column name="ID" type="CHAR(36)">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="EMPLOYEE_ID" type="CHAR(36)"/>
+			<column name="USERNAME" type="VARCHAR(35)" />
+			<column name="PASSWORD" type="VARCHAR(35)" />
+			<column name="CREATEDBY" type="CHAR(36)" />
+			<column name="CREATIONDATE" type="DATETIME" />
+			<column name="MODIFIEDBY" type="CHAR(36)" />
+			<column name="DATEMODIFIED" type="DATETIME" />
+			<column name="STATUS" type="BIT(1)" />
+		</createTable>
+	</changeSet>
 </databaseChangeLog>

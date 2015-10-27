@@ -1,4 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE dataset SYSTEM "db.dtd">
 <dataset>
+	<SystemUser
+		ID="9e7c3c94-3f9c-4e5d-904a-4dcc54811028"
+		EMPLOYEE_ID="9e7c3c94-3f9c-4e5d-904a-4dcc54811028"
+		USERNAME="administrator"
+		PASSWORD="@dm1n3rion"
+		CREATEDBY="9e7c3c94-3f9c-4e5d-904a-4dcc54811028"
+		CREATIONDATE="2015-01-01 00:00:00"
+		MODIFIEDBY="9e7c3c94-3f9c-4e5d-904a-4dcc54811028"
+		DATEMODIFIED="2015-01-01 00:00:00"
+		STATUS="1" />
 </dataset>

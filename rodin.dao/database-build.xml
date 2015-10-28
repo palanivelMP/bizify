@@ -9,7 +9,7 @@
 	</path>
 
 	<property file="build.properties" />
-	<property file="src/main/resources/database.properties" />
+	<property file="src/main/resources/db-connection.properties" />
 
 	<taskdef name="dbunit" classname="org.dbunit.ant.DbUnitTask" classpathref="classpath" />
 	<taskdef resource="liquibasetasks.properties" classpathref="classpath" />
@@ -28,9 +28,6 @@
 		</dbunit>
 	</target>
 
-	<target name="insertBaseData" description="Imports base dataset" depends="insertBaseData.mysql">
-	</target>
-
-	<target name="rebuild-database-insertBaseData" description="Rebuilds the database and imports base dataset" depends="rebuild-database, insertBaseData" />
+	<target name="rebuild-database-insertBaseData" description="Rebuilds the database and imports base dataset" depends="rebuild-database, insertBaseData.mysql" />
 
 </project>

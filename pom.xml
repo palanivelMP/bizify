@@ -80,7 +80,6 @@
 		<module>rodin.dao</module>
 		<module>rodin.util</module>
 		<module>rodin.rest</module>
-		<module>bizify.attendance.client</module>
 	</modules>
 
 	<build>

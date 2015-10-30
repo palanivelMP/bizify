@@ -9,9 +9,12 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.bizify.rodin.core.BaseDomain;
+import com.bizify.rodin.core.Persistence;
+
 @Entity
-@Table(name = "SystemModule")
-public class SystemModule extends BaseDomain {
+@Table(name = "systemmodule")
+public class SystemModule extends BaseDomain implements Persistence {
 
     private static final long serialVersionUID = -4689975054796455707L;
 

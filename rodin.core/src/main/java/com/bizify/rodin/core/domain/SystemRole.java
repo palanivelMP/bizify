@@ -4,9 +4,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import com.bizify.rodin.core.BaseDomain;
+import com.bizify.rodin.core.Persistence;
+
 @Entity
-@Table(name = "SystemRole")
-public class SystemRole extends BaseDomain {
+@Table(name = "systemrole")
+public class SystemRole extends BaseDomain implements Persistence {
     private static final long serialVersionUID = -8716034793299310105L;
 
     @Column(name = "name")

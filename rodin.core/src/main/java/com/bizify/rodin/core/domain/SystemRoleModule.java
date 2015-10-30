@@ -1,6 +1,9 @@
 package com.bizify.rodin.core.domain;
 
-public class SystemRoleModule extends BaseDomain {
+import com.bizify.rodin.core.BaseDomain;
+import com.bizify.rodin.core.Persistence;
+
+public class SystemRoleModule extends BaseDomain implements Persistence {
 	
 	private static final long serialVersionUID = 8160141364314641205L;
 	

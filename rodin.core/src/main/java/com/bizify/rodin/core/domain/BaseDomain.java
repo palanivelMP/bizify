@@ -9,6 +9,7 @@ import javax.persistence.MappedSuperclass;
 
 import org.hibernate.annotations.GenericGenerator;
 
+@SuppressWarnings("serial")
 @MappedSuperclass
 public abstract class BaseDomain implements DomainObject {
 	@Id

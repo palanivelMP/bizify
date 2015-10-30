@@ -12,68 +12,69 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "SystemModule")
 public class SystemModule extends BaseDomain {
-	
-	@Column(name = "Name")
-	private String name;
 
-	@Column(name = "description")
-	private String description;
+    private static final long serialVersionUID = -4689975054796455707L;
 
-	@Column(name = "Url")
-	private String url;
+    @Column(name = "name")
+    private String name;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	private SystemModule parentSystemModule;
+    @Column(name = "description")
+    private String description;
 
-	@OneToMany(cascade = CascadeType.ALL)
-	private Set<SystemModule> subSystemModules;
+    @Column(name = "url")
+    private String url;
 
-	public SystemModule() {
-	}
+    @OneToOne(cascade = CascadeType.ALL)
+    private SystemModule parentSystemModule;
 
-	public SystemModule(String name, String description) {
-		this.name = name;
-		this.description = description;
-	}
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<SystemModule> subSystemModules;
 
-	public String getName() {
-		return name;
-	}
+    public SystemModule() {}
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public SystemModule(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public String getUrl() {
-		return url;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public void setUrl(String url) {
-		this.url = url;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	public SystemModule getParentSystemModule() {
-		return parentSystemModule;
-	}
+    public String getUrl() {
+        return url;
+    }
 
-	public void setParentSystemModule(SystemModule parentSystemModule) {
-		this.parentSystemModule = parentSystemModule;
-	}
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
-	public void setSubSystemModules(Set<SystemModule> subSystemModules) {
-		this.subSystemModules = subSystemModules;
-	}
+    public SystemModule getParentSystemModule() {
+        return parentSystemModule;
+    }
 
-	public Set<SystemModule> getSubSystemModules() {
-		return subSystemModules;
-	}
+    public void setParentSystemModule(SystemModule parentSystemModule) {
+        this.parentSystemModule = parentSystemModule;
+    }
+
+    public void setSubSystemModules(Set<SystemModule> subSystemModules) {
+        this.subSystemModules = subSystemModules;
+    }
+
+    public Set<SystemModule> getSubSystemModules() {
+        return subSystemModules;
+    }
 
 }

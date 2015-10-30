@@ -7,34 +7,35 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "SystemRole")
 public class SystemRole extends BaseDomain {
-	@Column(name = "Name")
-	private String name;
+    private static final long serialVersionUID = -8716034793299310105L;
 
-	@Column(name = "Description")
-	private String description;
+    @Column(name = "name")
+    private String name;
 
-	public SystemRole() {
-	}
+    @Column(name = "description")
+    private String description;
 
-	public SystemRole(String name, String description) {
-		this.name = name;
-		this.description = description;
-	}
+    public SystemRole() {}
 
-	public String getName() {
-		return name;
-	}
+    public SystemRole(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
 }

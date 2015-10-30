@@ -1,31 +1,33 @@
 package com.bizify.rodin.core.domain;
 
 public class SystemUserRole extends BaseDomain {
-	private SystemUser systemUser;
-	private SystemRole systemRole;
 
-	public SystemUserRole() {
-	}
+    private static final long serialVersionUID = -1176647502233105858L;
 
-	public SystemUserRole(SystemUser systemUser, SystemRole systemRole) {
-		this.systemUser = systemUser;
-		this.systemRole = systemRole;
-	}
+    private SystemUser systemUser;
+    private SystemRole systemRole;
 
-	public SystemUser getSystemUser() {
-		return systemUser;
-	}
+    public SystemUserRole() {}
 
-	public void setSystemUser(SystemUser systemUser) {
-		this.systemUser = systemUser;
-	}
+    public SystemUserRole(SystemUser systemUser, SystemRole systemRole) {
+        this.systemUser = systemUser;
+        this.systemRole = systemRole;
+    }
 
-	public SystemRole getSystemRole() {
-		return systemRole;
-	}
+    public SystemUser getSystemUser() {
+        return systemUser;
+    }
 
-	public void setSystemRole(SystemRole systemRole) {
-		this.systemRole = systemRole;
-	}
+    public void setSystemUser(SystemUser systemUser) {
+        this.systemUser = systemUser;
+    }
+
+    public SystemRole getSystemRole() {
+        return systemRole;
+    }
+
+    public void setSystemRole(SystemRole systemRole) {
+        this.systemRole = systemRole;
+    }
 
 }

@@ -4,8 +4,8 @@
 	<SystemUser
 		ID="9e7c3c94-3f9c-4e5d-904a-4dcc54811028"
 		EMPLOYEE_ID="9e7c3c94-3f9c-4e5d-904a-4dcc54811028"
-		USERNAME="administrator"
-		PASSWORD="@dm1n3rion"
+		USERNAME="admin"
+		PASSWORD="admin"
 		CREATEDBY="9e7c3c94-3f9c-4e5d-904a-4dcc54811028"
 		CREATIONDATE="2015-01-01 00:00:00"
 		MODIFIEDBY="9e7c3c94-3f9c-4e5d-904a-4dcc54811028"

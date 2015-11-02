@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import com.bizify.rodin.rest.interfaces.PageableResultList;
 
-public abstract class BasePageableResultList<T extends Serializable> extends BaseResultList<T>implements PageableResultList<T> {
+public abstract class BasePageableResultList<T extends Serializable> extends BaseResultList<T> implements PageableResultList<T> {
     protected Integer totalRecords;
     protected Integer page;
 

@@ -17,5 +17,25 @@
 			<column name="DATEMODIFIED" type="DATETIME" />
 			<column name="STATUS" type="BIT(1)" />
 		</createTable>
+		
+		<createTable tableName="PersonalInfo">
+			<column name="ID" type="CHAR(36)">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="FIRSTNAME" type="CHAR(36)"/>
+			<column name="LASTNAME" type="VARCHAR(35)" />
+			<column name="middleName" type="VARCHAR(35)" />
+			<column name="CREATEDBY" type="CHAR(36)" />
+			<column name="CREATIONDATE" type="DATETIME" />
+			<column name="MODIFIEDBY" type="CHAR(36)" />
+			<column name="DATEMODIFIED" type="DATETIME" />
+			<column name="STATUS" type="BIT(1)" />
+		</createTable>
+		<!-- 
+				<addForeignKeyConstraint constraintName="PayrollList_Employee_Fk" 
+			referencedTableName="Employee" 
+			baseColumnNames="Employee_Id" 
+			baseTableName="PayrollList" 
+			referencedColumnNames="Id"/> -->
 	</changeSet>
 </databaseChangeLog>

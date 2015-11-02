@@ -57,5 +57,10 @@
 			<artifactId>spring-boot-starter-log4j</artifactId>
 			<version>${spring.boot.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-joda</artifactId>
+			<version>2.4.5</version>
+		</dependency>
 	</dependencies>
 </project>

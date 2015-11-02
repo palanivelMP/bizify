@@ -3,6 +3,8 @@ package com.bizify.rodin.core.domain;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
+import com.bizify.rodin.core.BaseDomain;
+
 /**
  * @author Chiro Cadiz
  */

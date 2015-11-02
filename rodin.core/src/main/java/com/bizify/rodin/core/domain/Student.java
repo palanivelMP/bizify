@@ -6,6 +6,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.bizify.rodin.core.BaseDomain;
+
 @Entity
 @Table(name = "Student")
 public class Student extends BaseDomain {

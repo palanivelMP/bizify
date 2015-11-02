@@ -9,6 +9,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.bizify.rodin.core.BaseDomain;
+
 /**
  * @author Chiro Cadiz
  */

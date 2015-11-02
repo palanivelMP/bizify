@@ -23,6 +23,6 @@
 	</dependencies>
 
 	<build>
-		<finalName>rodin.core</finalName>		
+		<finalName>rodin.core</finalName>
 	</build>
 </project>

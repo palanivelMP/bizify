@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import com.bizify.rodin.core.BaseDomain;
+
 @Entity
 @Table(name = "PersonalInfo")
 public class PersonalInfo extends BaseDomain {
@@ -24,16 +26,16 @@ public class PersonalInfo extends BaseDomain {
 
 	@Column
 	private LocalDate dateOfBirth;
-	
+
 	@Column
 	private String nationality;
-	
+
 	@Column
 	private String birthPlace;
-	
+
 	@Column
 	private String religion;
-	
+
 	public String getFirstName() {
 		return firstName;
 	}
@@ -97,5 +99,5 @@ public class PersonalInfo extends BaseDomain {
 	public void setReligion(String religion) {
 		this.religion = religion;
 	}
-	
+
 }

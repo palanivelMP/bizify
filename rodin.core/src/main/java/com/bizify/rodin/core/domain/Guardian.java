@@ -5,23 +5,25 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.bizify.rodin.core.BaseDomain;
+
 /**
  * @author Chiro Cadiz
  */
 
 @Entity
-@Table(name = "Guardian")
+@Table(name = "guardian")
 public class Guardian extends BaseDomain {
 
 	@OneToOne
-	@JoinColumn(name = "personalInfo_Id")
-	private PersonalInfo personalInfo;
+	@JoinColumn(name = "personalinfo_id")
+	private PersonalInformation personalInformation;
 
-	public PersonalInfo getPersonalInfo() {
-		return personalInfo;
+	public PersonalInformation getPersonalInfo() {
+		return personalInformation;
 	}
 
-	public void setPersonalInfo(PersonalInfo personalInfo) {
-		this.personalInfo = personalInfo;
+	public void setPersonalInfo(PersonalInformation personalInformation) {
+		this.personalInformation = personalInformation;
 	}
 }

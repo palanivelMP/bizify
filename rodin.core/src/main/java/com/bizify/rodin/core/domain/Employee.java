@@ -9,19 +9,21 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.bizify.rodin.core.BaseDomain;
+
 /**
  * @author Chiro Cadiz
  */
 
 @Entity
-@Table(name = "Employee")
+@Table(name = "employee")
 public class Employee extends BaseDomain {
 
 	@OneToOne
-	private PersonalInfo personalInfo;
+	private PersonalInformation personalInformation;
 
 	@ManyToOne
-	@JoinColumn(name = "department_Id")
+	@JoinColumn(name = "department_id")
 	private Department department;
 
 	@Column
@@ -30,12 +32,12 @@ public class Employee extends BaseDomain {
 	@Column
 	private LocalDate employmentEndDate;
 
-	public PersonalInfo getPersonalInfo() {
-		return personalInfo;
+	public PersonalInformation getPersonalInfo() {
+		return personalInformation;
 	}
 
-	public void setPersonalInfo(PersonalInfo personalInfo) {
-		this.personalInfo = personalInfo;
+	public void setPersonalInfo(PersonalInformation personalInformation) {
+		this.personalInformation = personalInformation;
 	}
 
 	public Department getDepartment() {

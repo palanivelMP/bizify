@@ -6,9 +6,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import com.bizify.rodin.core.BaseDomain;
+
 @Entity
-@Table(name = "PersonalInfo")
-public class PersonalInfo extends BaseDomain {
+@Table(name = "personalinfo")
+public class PersonalInformation extends BaseDomain {
 
 	@Column
 	private String firstName;

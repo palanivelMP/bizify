@@ -4,13 +4,15 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import com.bizify.rodin.core.BaseDomain;
+
 /**
  * @author Chiro Cadiz
  */
 
 @Entity
-@Table(name = "Position")
-public class Position extends AuditingDomain {
+@Table(name = "position")
+public class Position extends BaseDomain {
 
 	@Column
 	private String code;

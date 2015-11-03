@@ -3,6 +3,7 @@ package com.bizify.rodin.core.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import com.bizify.rodin.core.BaseDomain;
 import com.bizify.rodin.core.Persistence;
@@ -12,10 +13,11 @@ import com.bizify.rodin.core.Persistence;
  */
 
 @Entity
-@Table(name = "position")
-public class Position extends BaseDomain implements Persistence {
+@Table(name = "religion")
+public class Religion extends BaseDomain implements Persistence {
 
-    @Column
+    @NotNull
+    @Column(unique = true)
     private String code;
 
     @Column

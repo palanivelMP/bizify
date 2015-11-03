@@ -4,100 +4,89 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.bizify.rodin.core.BaseDomain;
+import com.bizify.rodin.core.Persistence;
 
 @Entity
-@Table(name = "personalinfo")
-public class PersonalInformation extends BaseDomain {
+@Table(name = "personalinformation")
+public class PersonalInformation extends BaseDomain implements Persistence {
 
-	@Column
-	private String firstName;
+    @Column
+    private String firstName;
 
-	@Column
-	private String lastName;
+    @Column
+    private String lastName;
 
-	@Column
-	private String middleName;
+    @Column
+    private String middleName;
 
-	@Column
-	private Integer age;
+    @Column
+    private Integer age;
 
-	@Column
-	private LocalDate dateOfBirth;
-	
-	@Column
-	private String nationality;
-	
-	@Column
-	private String birthPlace;
-	
-	@Column
-	private String religion;
-	
-	public String getFirstName() {
-		return firstName;
-	}
+    @Column
+    private LocalDate dateOfBirth;
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    @Column
+    private String birthPlace;
 
-	public String getLastName() {
-		return lastName;
-	}
+    @OneToOne
+    @JoinColumn(name = "religion_id")
+    private Religion religion;
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    @OneToOne
+    @JoinColumn(name = "nationality_id")
+    private Nationality personalInformation;
 
-	public String getMiddleName() {
-		return middleName;
-	}
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public void setMiddleName(String middleName) {
-		this.middleName = middleName;
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	public Integer getAge() {
-		return age;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public void setAge(Integer age) {
-		this.age = age;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-	public LocalDate getDateOfBirth() {
-		return dateOfBirth;
-	}
+    public String getMiddleName() {
+        return middleName;
+    }
 
-	public void setDateOfBirth(LocalDate dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
 
-	public String getNationality() {
-		return nationality;
-	}
+    public Integer getAge() {
+        return age;
+    }
 
-	public void setNationality(String nationality) {
-		this.nationality = nationality;
-	}
+    public void setAge(Integer age) {
+        this.age = age;
+    }
 
-	public String getBirthPlace() {
-		return birthPlace;
-	}
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
 
-	public void setBirthPlace(String birthPlace) {
-		this.birthPlace = birthPlace;
-	}
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
 
-	public String getReligion() {
-		return religion;
-	}
+    public String getBirthPlace() {
+        return birthPlace;
+    }
 
-	public void setReligion(String religion) {
-		this.religion = religion;
-	}
-	
+    public void setBirthPlace(String birthPlace) {
+        this.birthPlace = birthPlace;
+    }
+
 }

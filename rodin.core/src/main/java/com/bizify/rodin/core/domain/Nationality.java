@@ -12,8 +12,8 @@ import com.bizify.rodin.core.Persistence;
  */
 
 @Entity
-@Table(name = "position")
-public class Position extends BaseDomain implements Persistence {
+@Table(name = "nationality")
+public class Nationality extends BaseDomain implements Persistence {
 
     @Column
     private String code;

@@ -3,19 +3,18 @@ package com.bizify.rodin.core.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-
-import com.bizify.rodin.core.BaseDomain;
-import com.bizify.rodin.core.Persistence;
+import javax.validation.constraints.NotNull;
 
 /**
  * @author Chiro Cadiz
  */
 
 @Entity
-@Table(name = "position")
-public class Position extends BaseDomain implements Persistence {
+@Table(name = "subject")
+public class Subject {
 
-    @Column
+    @NotNull
+    @Column(unique = true)
     private String code;
 
     @Column

@@ -3,23 +3,21 @@ package com.bizify.rodin.core.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import com.bizify.rodin.core.BaseDomain;
 import com.bizify.rodin.core.Persistence;
 
-/**
- * @author Chiro Cadiz
- */
-
 @Entity
-@Table(name = "position")
-public class Position extends BaseDomain implements Persistence {
+@Table(name = "ContactMechPurposeType")
+public class ContactMechPurposeType extends BaseDomain implements Persistence {
 
-    @Column
+    @NotNull
+    @Column(unique = true)
     private String code;
 
     @Column
-    private String name;
+    private String description;
 
     public String getCode() {
         return code;
@@ -29,12 +27,12 @@ public class Position extends BaseDomain implements Persistence {
         this.code = code;
     }
 
-    public String getName() {
-        return name;
+    public String getDescription() {
+        return description;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }

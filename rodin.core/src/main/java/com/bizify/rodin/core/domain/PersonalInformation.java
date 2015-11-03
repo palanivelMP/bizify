@@ -4,13 +4,16 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.bizify.rodin.core.BaseDomain;
+import com.bizify.rodin.core.Persistence;
 
 @Entity
-@Table(name = "personalinfo")
-public class PersonalInformation extends BaseDomain {
+@Table(name = "personalinformation")
+public class PersonalInformation extends BaseDomain implements Persistence {
 
     @Column
     private String firstName;
@@ -28,13 +31,15 @@ public class PersonalInformation extends BaseDomain {
     private LocalDate dateOfBirth;
 
     @Column
-    private String nationality;
-
-    @Column
     private String birthPlace;
 
-    @Column
-    private String religion;
+    @OneToOne
+    @JoinColumn(name = "religion_id")
+    private Religion religion;
+
+    @OneToOne
+    @JoinColumn(name = "nationality_id")
+    private Nationality personalInformation;
 
     public String getFirstName() {
         return firstName;
@@ -76,28 +81,12 @@ public class PersonalInformation extends BaseDomain {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getNationality() {
-        return nationality;
-    }
-
-    public void setNationality(String nationality) {
-        this.nationality = nationality;
-    }
-
     public String getBirthPlace() {
         return birthPlace;
     }
 
     public void setBirthPlace(String birthPlace) {
         this.birthPlace = birthPlace;
-    }
-
-    public String getReligion() {
-        return religion;
-    }
-
-    public void setReligion(String religion) {
-        this.religion = religion;
     }
 
 }

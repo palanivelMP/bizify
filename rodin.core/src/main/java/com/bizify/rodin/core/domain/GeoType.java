@@ -7,19 +7,15 @@ import javax.persistence.Table;
 import com.bizify.rodin.core.BaseDomain;
 import com.bizify.rodin.core.Persistence;
 
-/**
- * @author Chiro Cadiz
- */
-
 @Entity
-@Table(name = "position")
-public class Position extends BaseDomain implements Persistence {
+@Table(name = "GeoType")
+public class GeoType extends BaseDomain implements Persistence {
 
-    @Column
+    @Column(unique = true)
     private String code;
 
-    @Column
-    private String name;
+    @Column(name = "Description")
+    private String description;
 
     public String getCode() {
         return code;
@@ -29,12 +25,11 @@ public class Position extends BaseDomain implements Persistence {
         this.code = code;
     }
 
-    public String getName() {
-        return name;
+    public String getDescription() {
+        return description;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDescription(String description) {
+        this.description = description;
     }
-
 }

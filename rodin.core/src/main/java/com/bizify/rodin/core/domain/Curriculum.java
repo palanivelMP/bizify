@@ -14,26 +14,26 @@ import com.bizify.rodin.core.BaseDomain;
 @Table(name = "Curriculum")
 public class Curriculum extends BaseDomain {
 
-	@Column(name = "Code")
-	private String code;
+    @Column(name = "Code")
+    private String code;
 
-	@Column(name = "Name")
-	private String name;
+    @Column(name = "Name")
+    private String name;
 
-	public String getCode() {
-		return code;
-	}
+    public String getCode() {
+        return code;
+    }
 
-	public void setCode(String code) {
-		this.code = code;
-	}
+    public void setCode(String code) {
+        this.code = code;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
 }
